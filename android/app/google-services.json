@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "602552143115",
+    "project_id": "local-rental",
+    "storage_bucket": "local-rental.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602552143115:android:f5d95c8f2cf495a512e60e",
+        "android_client_info": {
+          "package_name": "com.localrent.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrUw1mCPQpLceyqnC_gG3bqFK4e6YWZnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

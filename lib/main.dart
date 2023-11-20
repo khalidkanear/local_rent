@@ -1,13 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:local_rent/about-us/about_page.dart';
 import 'package:local_rent/auth/login_page.dart';
 import 'package:local_rent/choice.dart';
+import 'package:local_rent/firebase_options.dart';
+import 'package:local_rent/mobileapp/auth/signup.dart';
 import 'package:local_rent/products/product_model.dart';
 import 'listen.dart';
 import 'auth/signup_page.dart';
 import 'categories.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MyApp());
 }
 
@@ -33,16 +39,28 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'The Local Rent',
       theme: ThemeData(
           textTheme: const TextTheme(),
           textButtonTheme: const TextButtonThemeData(style: ButtonStyle()),
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+          primaryColor: Colors.black,
+          primarySwatch: const MaterialColor(0xFF000000, {
+            50: Colors.black,
+            100: Colors.black,
+            200: Colors.black,
+            300: Colors.black,
+            400: Colors.black,
+            500: Colors.black,
+            600: Colors.black,
+            700: Colors.black,
+            800: Colors.black,
+            900: Colors.black,
+          }),
           useMaterial3: true,
           fontFamily: 'Nomand Slab'),
-      home: const LandingPage(),
+      home: const SignUpPage(),
     );
   }
 }
