@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:local_rent/mobileapp/appbar.dart';
-import 'package:local_rent/mobileapp/profile/profile_page.dart';
+import 'package:local_rent/mobileapp/auth/login_page.dart';
+
+import 'package:local_rent/mobileapp/navbar.dart';
+
 import 'package:local_rent/mobileapp/widgets/customtext_form_field.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -53,7 +56,7 @@ class SignUpPage extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Get.to(() => const UserProfile());
+                    Get.to(() => const NavBar());
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff000000),
@@ -62,7 +65,9 @@ class SignUpPage extends StatelessWidget {
                   child: const Text('SignUp'),
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const LoginPage());
+                    },
                     child: const Text('Already Have Account? Sign In'))
               ],
             ),

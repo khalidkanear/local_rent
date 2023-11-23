@@ -56,7 +56,7 @@ class LoginMobile extends StatelessWidget {
                 const SizedBox(height: 30),
                 TextButton(
                   onPressed: () {},
-                  child: const Text('Login'),
+                  child: const Text(''),
                 ),
                 const SizedBox(height: 15),
                 TextButton(
