@@ -10,10 +10,11 @@ class AddProductPage extends StatefulWidget {
 }
 
 class _AddProductPageState extends State<AddProductPage> {
+  String? search;
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
-    String? search;
+
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(

@@ -48,7 +48,8 @@ class _ProfilePageState extends State<ProfilePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const editprofile()));
+                                  builder: (context) =>
+                                      const EditProfilePage()));
                         },
                         child: Text(
                           'Edit',
@@ -61,7 +62,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   padding: EdgeInsets.only(left: size.width / 1.6, top: 20),
                   child: CircleAvatar(
                     radius: size.width / 6,
-                    backgroundImage: const AssetImage('assets/img_5.png'),
+                    backgroundImage: const AssetImage('assets/img5.png'),
                   ),
                 ),
                 Padding(

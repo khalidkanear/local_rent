@@ -1,7 +1,10 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:local_rent/detail.dart';
+
 import 'package:local_rent/main.dart';
+import 'package:local_rent/mobileapp/search/search_result_page.dart';
 
 class SubCategoriesPage extends StatelessWidget {
   SubCategoriesPage({super.key, required this.tname});
@@ -164,12 +167,13 @@ class SubCategoriesPage extends StatelessWidget {
                   itemCount: product.products.length,
                   itemBuilder: (ctx, index) => ListTile(
                         onTap: () {
-                          Get.to(() => DetailsScreen(
-                              img: product.products[index].image ?? '',
-                              name: product.products[index].name ?? '',
-                              text: product.products[index].name ?? '',
-                              rent: 'rent',
-                              detal: 'its rent out'));
+                          Get.to(() => SearchResultPage());
+                          // Get.to(() => DetailsScreen(
+                          //     img: product.products[index].image ?? '',
+                          //     name: product.products[index].name ?? '',
+                          //     text: product.products[index].name ?? '',
+                          //     rent: 'rent',
+                          //     detal: 'its rent out'));
                         },
                         leading: Container(
                             decoration: BoxDecoration(

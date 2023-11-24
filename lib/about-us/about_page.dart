@@ -63,7 +63,7 @@ class _aboutState extends State<about> {
                           TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (_) => const signup()));
+                                  builder: (_) => const SignUp()));
                             },
                             child: Text(
                               'SIGN UP',
@@ -101,7 +101,7 @@ class _aboutState extends State<about> {
                         TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (_) => const signup()));
+                                  builder: (_) => const SignUp()));
                             },
                             child: Text(
                               'SIGN UP',

@@ -20,10 +20,10 @@ class DetailsScreen extends StatefulWidget {
   final String detal;
 
   @override
-  State<DetailsScreen> createState() => _detailState();
+  State<DetailsScreen> createState() => _DetailState();
 }
 
-class _detailState extends State<DetailsScreen> {
+class _DetailState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
     PageController pageController = PageController();
@@ -35,7 +35,7 @@ class _detailState extends State<DetailsScreen> {
       widget.img,
       widget.img,
     ];
-    var rating = 0;
+
     var size = MediaQuery.sizeOf(context);
     var buttonstyle = TextStyle(
         fontSize: size.width / 70,
@@ -86,7 +86,7 @@ class _detailState extends State<DetailsScreen> {
                             TextButton(
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (_) => const signup()));
+                                    builder: (_) => const SignUp()));
                               },
                               child: Text(
                                 'SIGN UP',
@@ -124,7 +124,7 @@ class _detailState extends State<DetailsScreen> {
                           TextButton(
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (_) => const signup()));
+                                    builder: (_) => const SignUp()));
                               },
                               child: Text(
                                 'SIGN UP',
@@ -196,15 +196,15 @@ class _detailState extends State<DetailsScreen> {
                               ),
                               RatingBar.builder(
                                 initialRating: 0,
+                                itemSize: 20,
                                 minRating: 1,
                                 direction: Axis.horizontal,
                                 allowHalfRating: true,
                                 itemCount: 5,
-                                itemBuilder: (context, _) => Icon(
-                                  Icons.star,
-                                  color: Colors.amber,
-                                  size: size.width / 60,
-                                ),
+                                itemBuilder: (context, _) => const Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                    size: 11),
                                 onRatingUpdate: (rating) {
                                   print(rating);
                                 },
@@ -450,6 +450,7 @@ class _detailState extends State<DetailsScreen> {
                               ),
                               RatingBar.builder(
                                 initialRating: 0,
+                                itemSize: 20,
                                 minRating: 1,
                                 direction: Axis.horizontal,
                                 allowHalfRating: true,
@@ -469,11 +470,9 @@ class _detailState extends State<DetailsScreen> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  maximumSize: const Size(260, 60),
-                                  minimumSize: const Size(260, 60),
-                                  padding: const EdgeInsets.all(20),
-                                  backgroundColor:
-                                      Colors.cyanAccent.withOpacity(0.4)),
+                                  maximumSize: const Size(300, 60),
+                                  minimumSize: const Size(300, 60),
+                                  backgroundColor: Colors.black),
                               onPressed: () {
                                 showDialog(
                                   context: context,

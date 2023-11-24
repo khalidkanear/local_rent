@@ -5,16 +5,14 @@ import 'package:local_rent/mobileapp/allcategories/allcategories_page.dart';
 import 'package:local_rent/mobileapp/auth/profile.dart';
 import 'package:local_rent/mobileapp/chat/chat_page.dart';
 
-import 'home.dart';
-
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
 
   @override
-  State<NavBar> createState() => _navbarState();
+  State<NavBar> createState() => _NavbarState();
 }
 
-class _navbarState extends State<NavBar> {
+class _NavbarState extends State<NavBar> {
   int _currentIndex = 1;
 
   @override

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:local_rent/about-us/about_page.dart';
-import 'auth/signup_page.dart';
+import 'package:local_rent/auth/signup_page.dart';
+
 import 'auth/login_page.dart';
 import 'main.dart';
 import 'choice.dart';
 
-class categorie extends StatefulWidget {
-  const categorie({super.key});
+class Categories extends StatefulWidget {
+  const Categories({super.key});
 
   @override
-  State<categorie> createState() => _categorieState();
+  State<Categories> createState() => _CategoriesState();
 }
 
-class _categorieState extends State<categorie> {
+class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
     MyApp product = MyApp();
@@ -65,7 +66,7 @@ class _categorieState extends State<categorie> {
                           TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (_) => const signup()));
+                                  builder: (_) => const SignUp()));
                             },
                             child: Text(
                               'SIGN UP',
@@ -103,7 +104,7 @@ class _categorieState extends State<categorie> {
                         TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (_) => const signup()));
+                                  builder: (_) => const SignUp()));
                             },
                             child: Text(
                               'SIGN UP',

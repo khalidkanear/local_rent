@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
-TextFormField CustomTextFormField({
-  TextEditingController? controller,
-  String? hint,
-}) {
+TextFormField CustomTextFormField(
+    {TextEditingController? controller,
+    String? hint,
+    String? Function(String?)? validator,
+    void Function(String)? onChanged}) {
   return TextFormField(
-      cursorHeight: 16,
+      onChanged: onChanged,
+      validator: validator,
+      style: const TextStyle(fontSize: 17, height: 1),
       controller: controller,
       decoration: InputDecoration(
-          contentPadding: const EdgeInsets.only(top: 30, left: 30),
+          contentPadding: const EdgeInsets.only(top: 0, left: 30),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
           disabledBorder:
               OutlineInputBorder(borderRadius: BorderRadius.circular(30)),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:local_rent/categories.dart';
 import 'auth/login_page.dart';
-import 'categories.dart';
+
 import 'main.dart';
 import 'auth/signup_page.dart';
 
@@ -63,7 +64,7 @@ class _listenState extends State<listen> {
                           TextButton(
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (_) => const signup()));
+                                    builder: (_) => const SignUp()));
                               },
                               child: Text(
                                 'SIGN UP',
@@ -100,7 +101,7 @@ class _listenState extends State<listen> {
                         TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (_) => const signup()));
+                                  builder: (_) => const SignUp()));
                             },
                             child: Text(
                               'SIGN UP',
@@ -183,7 +184,7 @@ class _listenState extends State<listen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const categorie()));
+                                  builder: (context) => const Categories()));
                         },
                         child: Row(
                           children: [
@@ -263,7 +264,7 @@ class _listenState extends State<listen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const categorie()));
+                                builder: (context) => const Categories()));
                       },
                       child: const Row(
                         children: [
@@ -586,7 +587,7 @@ class _listenState extends State<listen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const signup()));
+                                      builder: (context) => const SignUp()));
                             },
                             child: const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -632,7 +633,7 @@ class _listenState extends State<listen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const signup()));
+                                builder: (context) => const SignUp()));
                       },
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,

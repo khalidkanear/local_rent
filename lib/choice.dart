@@ -5,7 +5,7 @@ import 'package:local_rent/about-us/about_page.dart';
 
 import 'auth/signup_page.dart';
 import 'auth/login_page.dart';
-import 'package:local_rent/All Products Lists.dart';
+import 'package:local_rent/all_products_lists.dart';
 import 'detail.dart';
 
 class ChoicePage extends StatefulWidget {
@@ -92,7 +92,7 @@ class _choiceState extends State<ChoicePage> {
                           TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (_) => const signup()));
+                                  builder: (_) => const SignUp()));
                             },
                             child: Text(
                               'SIGN UP',
@@ -130,7 +130,7 @@ class _choiceState extends State<ChoicePage> {
                         TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (_) => const signup()));
+                                  builder: (_) => const SignUp()));
                             },
                             child: Text(
                               'SIGN UP',

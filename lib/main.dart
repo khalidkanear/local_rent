@@ -43,7 +43,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'The Local Rent',
       theme: ThemeData(
-          textTheme: const TextTheme(),
+          textTheme: const TextTheme(
+              bodySmall: TextStyle(fontFamily: 'Raleway'),
+              bodyLarge: TextStyle(
+                  fontFamily: 'Raleway',
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold),
+              bodyMedium: TextStyle(fontFamily: 'Raleway')),
           textButtonTheme: const TextButtonThemeData(style: ButtonStyle()),
           primaryColor: Colors.black,
           primarySwatch: const MaterialColor(0xFF000000, {
@@ -60,7 +66,7 @@ class MyApp extends StatelessWidget {
           }),
           useMaterial3: true,
           fontFamily: 'Nomand Slab'),
-      home: const SignUpPage(),
+      home: SignUpPage(),
     );
   }
 }
@@ -120,7 +126,7 @@ class LandingPage extends StatelessWidget {
                           TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (_) => const signup()));
+                                  builder: (_) => const SignUp()));
                             },
                             child: Text(
                               'SIGN UP',
@@ -158,7 +164,7 @@ class LandingPage extends StatelessWidget {
                         TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (_) => const signup()));
+                                  builder: (_) => const SignUp()));
                             },
                             child: Text(
                               'SIGN UP',
@@ -405,7 +411,7 @@ class LandingPage extends StatelessWidget {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        const categorie()));
+                                                        const Categories()));
                                           },
                                           child: Text(
                                             'Rent Now',
@@ -566,7 +572,7 @@ class LandingPage extends StatelessWidget {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        const categorie()));
+                                                        const Categories()));
                                           },
                                           child: Text(
                                             'Rent Now',
@@ -729,7 +735,7 @@ class LandingPage extends StatelessWidget {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const categorie()));
+                                                      const Categories()));
                                         },
                                         child: Text(
                                           'Rent Now',
@@ -891,7 +897,7 @@ class LandingPage extends StatelessWidget {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const categorie()));
+                                                      const Categories()));
                                         },
                                         child: Text(
                                           'Rent Now',
@@ -1049,7 +1055,7 @@ class LandingPage extends StatelessWidget {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const categorie()));
+                                                    const Categories()));
                                       },
                                       child: Text(
                                         'Rent Now',

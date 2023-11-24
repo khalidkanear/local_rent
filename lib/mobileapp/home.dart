@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:local_rent/choice.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,13 +9,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeState extends State<HomePage> {
+  String? img;
+  String? rating;
+  String? name;
+  String? memberdate;
+  String? txt;
   @override
   Widget build(BuildContext context) {
-    String? img;
-    String? rating;
-    String? name;
-    String? memberdate;
-    String? txt;
     var size = MediaQuery.sizeOf(context);
     var padding = EdgeInsets.only(left: size.width / 7);
     return Scaffold(
@@ -56,7 +55,7 @@ class _HomeState extends State<HomePage> {
                     child: CircleAvatar(
                       radius: size.width / 4.5,
                       backgroundImage: img != null
-                          ? AssetImage(img)
+                          ? AssetImage('$img')
                           : const AssetImage('assets/img_5.png'),
                     ),
                   ),

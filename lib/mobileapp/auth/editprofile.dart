@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
-class editprofile extends StatefulWidget {
-  const editprofile({super.key});
+class EditProfilePage extends StatefulWidget {
+  const EditProfilePage({super.key});
 
   @override
-  State<editprofile> createState() => _editprofileState();
+  State<EditProfilePage> createState() => _EditProfilePageState();
 }
 
-class _editprofileState extends State<editprofile> {
+class _EditProfilePageState extends State<EditProfilePage> {
   File? galleryFile;
   final picker = ImagePicker();
   bool isEditing = false;
@@ -53,7 +53,7 @@ class _editprofileState extends State<editprofile> {
                     radius: size.width / 8,
                     backgroundImage: galleryFile != null
                         ? AssetImage(galleryFile.toString())
-                        : const AssetImage('assets/img_5.png'),
+                        : const AssetImage('assets/img5.png'),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -392,63 +392,50 @@ class _editprofileState extends State<editprofile> {
     required BuildContext context,
   }) {
     showModalBottomSheet(
+      backgroundColor: Colors.transparent,
+      shape: const BeveledRectangleBorder(),
       context: context,
       builder: (BuildContext context) {
-        return Container(
-          color: Colors.white.withOpacity(0.1),
-          height: 250,
-          child: Column(
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Wrap(
             children: [
               Container(
-                width: 300,
-                padding: const EdgeInsets.all(16),
-                color: Colors.white,
-                child: const Center(
-                  child: Text(
-                    'Change Your Profile Photo',
-                    style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.bold),
+                color: const Color.fromRGBO(255, 255, 255, 1),
+                child: Column(children: [
+                  const ListTile(
+                    dense: true,
+                    minVerticalPadding: 0,
+                    tileColor: Colors.white,
+                    title: Center(child: Text('Change Your Profile Photo')),
                   ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  getImage(ImageSource.camera);
-                  Navigator.of(context).pop();
-                },
-                child: Container(
-                  width: 300,
-                  padding: const EdgeInsets.all(16),
-                  color: Colors.white,
-                  child: const Center(
-                    child: Text(
-                      'Camera',
-                      style: TextStyle(color: Colors.black),
-                    ),
+                  const Divider(
+                    color: Colors.black,
+                    thickness: 1,
                   ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  getImage(ImageSource.gallery);
-                  Navigator.of(context).pop();
-                },
-                child: Container(
-                  width: 300,
-                  padding: const EdgeInsets.all(16),
-                  color: Colors.white,
-                  child: const Center(
-                    child: Text(
-                      'Photo Library',
-                      style: TextStyle(color: Colors.black),
-                    ),
+                  ListTile(
+                    onTap: () => getImage(ImageSource.camera),
+                    minVerticalPadding: 0,
+                    dense: true,
+                    tileColor: Colors.white,
+                    title: const Center(child: Text('Camera')),
                   ),
-                ),
+                  const Divider(
+                    color: Colors.black,
+                    thickness: 1,
+                  ),
+                  ListTile(
+                    onTap: () => getImage(ImageSource.gallery),
+                    dense: true,
+                    minVerticalPadding: 0,
+                    tileColor: Colors.white,
+                    title: const Center(child: Text('Photo Library')),
+                  ),
+                ]),
               ),
               Container(
                 padding: const EdgeInsets.all(16),
                 height: 20,
-                width: 300,
                 color: Colors.transparent,
               ),
               GestureDetector(
@@ -456,14 +443,14 @@ class _editprofileState extends State<editprofile> {
                   Navigator.of(context).pop();
                 },
                 child: Container(
-                  width: 300,
+                  margin: const EdgeInsets.only(bottom: 20),
                   padding: const EdgeInsets.all(16),
                   color: Colors.amber,
                   child: const Center(
                     child: Text('Cancel'),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         );

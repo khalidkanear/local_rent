@@ -7,18 +7,18 @@ class AllCategoriesPage extends StatelessWidget {
   AllCategoriesPage({super.key});
   MyApp product = MyApp();
   @override
-  final drawerKey = GlobalKey<ScaffoldState>();
+  final _drawerKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      key: drawerKey,
+      key: _drawerKey,
       endDrawer: const Drawer(),
       appBar: AppBar(
         actions: [
           InkWell(
             onTap: () {
-              drawerKey.currentState?.openEndDrawer();
+              _drawerKey.currentState?.openEndDrawer();
             },
             child: const Icon(
               Icons.menu,

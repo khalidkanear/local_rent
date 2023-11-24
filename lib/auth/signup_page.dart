@@ -7,14 +7,14 @@ import 'dart:io';
 import 'package:local_rent/listen.dart';
 import 'userdata_model.dart';
 
-class signup extends StatefulWidget {
-  const signup({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<signup> createState() => _signupState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _signupState extends State<signup> {
+class _SignUpState extends State<SignUp> {
   File? galleryFile;
   final picker = ImagePicker();
   bool? selectedRadio; // Initialize with a default value
@@ -443,7 +443,7 @@ class _signupState extends State<signup> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const categorie()));
+                                                const Categories()));
                                     const snackBar = SnackBar(
                                       content: Text("Succes"),
                                     );
@@ -812,7 +812,7 @@ class _signupState extends State<signup> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const categorie()));
+                                                const Categories()));
                                     const snackBar = SnackBar(
                                       content: Text("Succes"),
                                     );
